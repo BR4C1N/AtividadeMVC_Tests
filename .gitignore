@@ -1,0 +1,4 @@
+postgreSQL/data/
+src/trabalho/vendor/
+src/trabalho/composer.lock
+composer.phar
