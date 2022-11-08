@@ -8,5 +8,11 @@
         public function testStatus(){
             $pergunta = new Pergunta("teste", "done");
             $this->assertContains($pergunta->getStatus(), ["done", "clear"]);
+
+            $pergunta = new Pergunta("teste", "clear");
+            $this->assertContains($pergunta->getStatus(), ["done", "clear"]);
+
+            $pergunta = new Pergunta("teste", "teste");
+            $this->assertNotContains($pergunta->getStatus(), ["done", "clear"]);
         }
     }
